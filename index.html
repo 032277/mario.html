@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mario Pyramid</title>
+    <script src="mario.js" defer></script>
+</head>
+<style>
+    body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white;
+
+            background-image: url("images/Mariobackground.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #game {
+            position: relative;
+            width: 600px;
+            height: 400px;
+        }
+
+    #pyramid {
+        font-family: monospace;
+        font-size: 24px;
+        white-space: pre;
+        color: white;
+    }
+    #mario {
+        position: absolute;
+        width: 500px;
+        top: 0;
+        left: 0;
+ }
+
+    .jump {
+        animation: jump 0.5s ease;
+    }
+    @keyframes jump {
+        0% {transform: translateY(0); }
+        50% {transform: translateY(-100px); }
+        100% {transform: translateY(0); }
+    }
+</style>
+    <body>
+        <pre id="pyramid"></pre>
+        <div id="game">
+            <img src="images/mario.png" id="mario">
+        </div>
+       <audio id="backgroundMusic" loop>
+    <source src="music/mariomusic.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton">Play Music</button>
+
+    </body>
+</html>
